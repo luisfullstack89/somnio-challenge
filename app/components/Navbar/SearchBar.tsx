@@ -8,14 +8,14 @@ interface SearchBarProps {
 
 const SearchBar = ({ searchTerm, setSearchTerm }: SearchBarProps) => {
   return (
-    <div className=" flex md:w-96 p-1 pr-4 pl-4 rounded-2xl justify-between bg-white">
+    <div className="flex md:w-96 p-1 pr-4 pl-4 rounded-2xl justify-between bg-white">
       <input
         className="text-sm bg-transparent text-gray-500 focus:outline-none"
         type="text"
         placeholder="Buscar Productos ...."
         value={searchTerm}
         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-          setSearchTerm(e.target.value)
+          setSearchTerm && setSearchTerm(e.target.value)
         }
       />
       <div className="flex items-center">

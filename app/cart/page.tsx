@@ -25,6 +25,7 @@ const CartPage = () => {
             {cart &&
               cart.cartItems.map((items: cartItem) => (
                 <CartItemRow
+                  key={items.id}
                   qty={items.qty}
                   itemName={items.title}
                   itemsPrice={items.qty * items.price}
